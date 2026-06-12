@@ -1,0 +1,32 @@
+.contract-process {
+  padding: 90px 40px;
+  background: #0b0b10;
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 200px;
+}
+
+.step span {
+  display: block;
+  font-size: 22px;
+  color: #e91e8c;
+  margin-bottom: 10px;
+}

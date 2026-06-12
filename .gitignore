@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+
+.vite/
+.cache/
+
+.DS_Store
+# Local Netlify folder
+.netlify

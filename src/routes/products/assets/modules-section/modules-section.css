@@ -1,0 +1,68 @@
+.modules-section {
+  padding: 120px 40px;
+}
+
+.modules-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.modules-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 72px;
+}
+
+.modules-title {
+  margin: 20px 0;
+
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.modules-description {
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.module-card {
+  padding: 28px;
+
+  background: rgba(255,255,255,0.02);
+
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+
+  transition: all .3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(233,30,140,.3);
+
+  background: rgba(233,30,140,.04);
+}
+
+.module-number {
+  margin-bottom: 16px;
+
+  color: var(--accent-pink);
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.module-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}

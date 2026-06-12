@@ -1,0 +1,92 @@
+.highlights-section {
+  padding: 90px 40px;
+  background: radial-gradient(
+      circle at top,
+      rgba(233, 30, 140, 0.08),
+      transparent 60%
+    ),
+    #0b0b10;
+}
+
+.highlights-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.highlights-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.highlights-header h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.highlights-header h2 span {
+  color: #e91e8c;
+}
+
+.highlights-header p {
+  margin-top: 14px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.highlight-card {
+  padding: 26px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(233, 30, 140, 0.15),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(233, 30, 140, 0.35);
+}
+
+.highlight-card:hover::before {
+  opacity: 1;
+}
+
+.highlight-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.highlight-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}

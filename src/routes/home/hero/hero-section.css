@@ -1,0 +1,216 @@
+.hero { padding: 40px; position: relative; overflow: hidden }
+.hero-glow { position: absolute; pointer-events: none }
+
+.hero-glow-top {
+  background: radial-gradient( circle, rgba(233, 30, 140, 0.12) 0%, transparent 70%);
+  height: 600px;
+  width: 600px;
+  top: -100px;
+  right: 10%;
+}
+
+.hero-glow-bottom {
+  bottom: 0;
+  left: 5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0 0 24px;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.hero-stat-number {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #fff,
+    rgba(255, 255, 255, 0.7)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 2px;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 420px;
+}
+
+.hero-camera-glow {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(233, 30, 140, 0.2) 0%,
+    transparent 70%G
+  );
+}
+
+.hero-camera {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-cage {
+  position: absolute;
+  top: 0;
+  height: 450px;
+}
+
+.hero-photo-strip {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  z-index: 3;
+  transform: rotate(12deg);
+  background: #111;
+  border: 3px solid #222;
+  border-radius: 6px;
+  padding: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.hero-photo-item {
+  width: 70px;
+  height: 56px;
+  margin-bottom: 4px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-photo-item:last-child {
+  margin-bottom: 0;
+}
+
+.hero-photo-heart {
+  text-align: center;
+  margin-top: 6px;
+}
+
+
+.hero-instagram-photo {
+  position: absolute;
+  left: -30px;
+  top: 25px;
+
+  width: 150px;
+
+  z-index: 1;
+
+  background: #111;
+  border: 3px solid #222;
+  border-radius: 10px;
+
+  padding: 8px;
+
+  transform: rotate(-10deg);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.hero-instagram-photo-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 8px;
+
+  color: rgba(255,255,255,0.8);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.hero-instagram-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    var(--accent-pink),
+    var(--accent-cyan)
+  );
+}
+
+.hero-instagram-photo-image {
+  width: 100%;
+  height: 120px;
+
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #1a1a2e,
+    #16213e
+  );
+}
+
+.hero-instagram-photo-footer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-top: 8px;
+
+  color: rgba(255,255,255,0.55);
+  font-size: 11px;
+}

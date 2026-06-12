@@ -1,0 +1,102 @@
+.products-section { padding: 40px }
+
+.products-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.products-header {
+  text-align: center;
+  margin: 48px 0;
+}
+
+.products-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.product-card-clickable {
+  cursor: pointer;
+}
+
+.product-image {
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-icon {
+  color: rgba(255, 255, 255, 0.3);
+  transform: scale(2.5);
+  width: 180px;
+  height: 160px;
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.product-content {
+  padding: 20px;
+}
+
+.product-students {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
+
+.product-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0 8px;
+  line-height: 1.4;
+}
+
+.product-description {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--accent-pink);
+}
+
+.product-old-price {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: line-through;
+}
+
+.product-cart-button {
+  padding: 8px 16px;
+  font-size: 12px;
+}
