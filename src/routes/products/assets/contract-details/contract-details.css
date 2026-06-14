@@ -5,7 +5,6 @@
 .contract-details-container {
   max-width: 1280px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
@@ -20,27 +19,17 @@
 .contract-details-document {
   width: 100%;
   max-width: 460px;
-
   padding: 36px;
-
   border-radius: 28px;
-
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,.04),
-    rgba(255,255,255,.02)
-  );
-
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
   border: 1px solid var(--border-subtle);
 }
 
 .contract-details-document-header {
   margin-bottom: 32px;
-
   font-size: 14px;
   font-weight: 800;
   letter-spacing: .08em;
-
   color: var(--accent-pink);
 }
 
@@ -48,9 +37,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-
   padding: 14px 0;
-
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
 
@@ -60,7 +47,6 @@
 
 .contract-details-title {
   margin: 20px 0;
-
   font-size: clamp(36px, 4vw, 56px);
   font-weight: 900;
   line-height: 1.1;
@@ -69,7 +55,6 @@
 .contract-details-description {
   color: rgba(255,255,255,.6);
   line-height: 1.8;
-
   margin-bottom: 32px;
 }
 
@@ -83,7 +68,6 @@
   display: flex;
   align-items: center;
   gap: 14px;
-
   color: rgba(255,255,255,.85);
 }
 
@@ -91,4 +75,26 @@
   color: var(--accent-pink);
   font-weight: 900;
   flex-shrink: 0;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .contract-details {
+    padding: 64px 20px;
+  }
+
+  .contract-details-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contract-details-document {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .contract-details-title {
+    font-size: clamp(26px, 7vw, 48px);
+  }
 }

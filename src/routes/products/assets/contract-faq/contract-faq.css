@@ -14,7 +14,6 @@
 
 .contract-faq-title {
   margin: 20px 0;
-
   font-size: clamp(36px, 4vw, 56px);
   font-weight: 900;
   line-height: 1.1;
@@ -33,13 +32,9 @@
 
 .contract-faq-item {
   border-radius: 20px;
-
   background: rgba(255,255,255,.02);
-
   border: 1px solid var(--border-subtle);
-
   overflow: hidden;
-
   transition: all .3s ease;
 }
 
@@ -49,11 +44,8 @@
 
 .contract-faq-question {
   padding: 24px 28px;
-
   cursor: pointer;
-
   list-style: none;
-
   font-size: 18px;
   font-weight: 700;
 }
@@ -64,8 +56,28 @@
 
 .contract-faq-answer {
   padding: 0 28px 24px;
-
   color: rgba(255,255,255,.6);
-
   line-height: 1.8;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .contract-faq {
+    padding: 64px 20px;
+  }
+
+  .contract-faq-header {
+    margin-bottom: 36px;
+  }
+
+  .contract-faq-question {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+
+  .contract-faq-answer {
+    padding: 0 20px 18px;
+    font-size: 14px;
+  }
 }

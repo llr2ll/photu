@@ -1,8 +1,6 @@
 .contract-cta {
   position: relative;
-
   padding: 140px 40px;
-
   overflow: hidden;
 }
 
@@ -13,59 +11,34 @@
 
 .contract-cta-glow {
   position: absolute;
-
   top: 50%;
   left: 50%;
-
   width: 900px;
   height: 900px;
-
   transform: translate(-50%, -50%);
-
-  background: radial-gradient(
-    circle,
-    rgba(233,30,140,.12) 0%,
-    transparent 70%
-  );
-
+  background: radial-gradient(circle, rgba(233,30,140,.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .contract-cta-card {
   position: relative;
   z-index: 2;
-
   text-align: center;
-
   padding: 64px;
-
   border-radius: 32px;
-
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,.04),
-    rgba(255,255,255,.02)
-  );
-
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
   border: 1px solid rgba(233,30,140,.15);
-
   backdrop-filter: blur(20px);
 }
 
 .contract-cta-badge {
   display: inline-flex;
-
   padding: 10px 18px;
-
   margin-bottom: 24px;
-
   border-radius: 999px;
-
   background: rgba(233,30,140,.1);
   border: 1px solid rgba(233,30,140,.25);
-
   color: var(--accent-pink);
-
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .08em;
@@ -73,7 +46,6 @@
 
 .contract-cta-title {
   margin-bottom: 24px;
-
   font-size: clamp(42px, 5vw, 72px);
   font-weight: 900;
   line-height: 1.05;
@@ -81,11 +53,8 @@
 
 .contract-cta-description {
   max-width: 620px;
-
   margin: 0 auto;
-
   color: rgba(255,255,255,.65);
-
   font-size: 18px;
   line-height: 1.8;
 }
@@ -96,84 +65,102 @@
 
 .contract-cta-old-price {
   display: block;
-
   margin-bottom: 8px;
-
   color: rgba(255,255,255,.35);
-
   text-decoration: line-through;
-
   font-size: 24px;
 }
 
 .contract-cta-price {
   font-size: clamp(64px, 8vw, 96px);
   font-weight: 900;
-
   line-height: 1;
-
-  background: linear-gradient(
-    135deg,
-    #ffffff,
-    rgba(255,255,255,.75)
-  );
-
+  background: linear-gradient(135deg, #ffffff, rgba(255,255,255,.75));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .contract-cta-installments {
   display: block;
-
   margin-top: 12px;
-
   color: rgba(255,255,255,.55);
-
   font-size: 15px;
 }
 
 .contract-cta-includes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   gap: 16px;
-
   margin: 48px 0;
 }
 
 .contract-cta-include {
   display: flex;
   align-items: center;
-
   gap: 12px;
-
   text-align: left;
-
   color: rgba(255,255,255,.85);
 }
 
 .contract-cta-check {
   color: var(--accent-pink);
-
   font-weight: 900;
-
   flex-shrink: 0;
 }
 
 .contract-cta-button {
   width: 100%;
-
   justify-content: center;
-
   padding: 22px 32px;
-
   font-size: 18px;
 }
 
 .contract-cta-security {
   margin-top: 24px;
-
   color: rgba(255,255,255,.45);
-
   font-size: 13px;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .contract-cta {
+    padding: 64px 20px;
+  }
+
+  .contract-cta-card {
+    padding: 32px 20px;
+    border-radius: 24px;
+  }
+
+  .contract-cta-title {
+    font-size: clamp(28px, 8vw, 48px);
+  }
+
+  .contract-cta-description {
+    font-size: 15px;
+  }
+
+  .contract-cta-pricing {
+    margin: 32px 0;
+  }
+
+  .contract-cta-old-price {
+    font-size: 18px;
+  }
+
+  .contract-cta-price {
+    font-size: clamp(48px, 14vw, 80px);
+  }
+
+  .contract-cta-includes {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 32px 0;
+  }
+
+  .contract-cta-button {
+    font-size: 15px;
+    padding: 18px 20px;
+  }
 }

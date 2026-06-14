@@ -9,15 +9,12 @@
 
 .contract-process-header {
   max-width: 760px;
-
   text-align: center;
-
   margin: 0 auto 80px;
 }
 
 .contract-process-title {
   margin: 20px 0;
-
   font-size: clamp(36px, 4vw, 56px);
   font-weight: 900;
   line-height: 1.1;
@@ -32,43 +29,32 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-
   position: relative;
 }
 
 .contract-process-step {
   position: relative;
-
   text-align: center;
-
   padding: 32px 24px;
 }
 
 .contract-process-number {
   width: 72px;
   height: 72px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin: 0 auto 24px;
-
   border-radius: 50%;
-
   background: rgba(233,30,140,.12);
-
   border: 1px solid rgba(233,30,140,.2);
-
   color: var(--accent-pink);
-
   font-size: 20px;
   font-weight: 900;
 }
 
 .contract-process-step-title {
   margin-bottom: 12px;
-
   font-size: 22px;
   font-weight: 700;
 }
@@ -80,16 +66,64 @@
 
 .contract-process-line {
   position: absolute;
-
   top: 68px;
   left: calc(50% + 48px);
-
   width: calc(100% - 96px);
   height: 1px;
+  background: linear-gradient(90deg, rgba(233,30,140,.4), rgba(233,30,140,.1));
+}
 
-  background: linear-gradient(
-    90deg,
-    rgba(233,30,140,.4),
-    rgba(233,30,140,.1)
-  );
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .contract-process {
+    padding: 64px 20px;
+  }
+
+  .contract-process-header {
+    margin-bottom: 48px;
+  }
+
+  /* Switch to vertical single column */
+  .contract-process-timeline {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contract-process-step {
+    text-align: left;
+    padding: 0 0 0 80px;
+    position: relative;
+    padding-bottom: 36px;
+  }
+
+  .contract-process-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 56px;
+    height: 56px;
+    font-size: 16px;
+  }
+
+  .contract-process-step-title {
+    font-size: 18px;
+    padding-top: 12px;
+  }
+
+  /* Vertical connector line */
+  .contract-process-line {
+    position: absolute;
+    top: 56px;
+    left: 27px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background: linear-gradient(180deg, rgba(233,30,140,.4), rgba(233,30,140,.1));
+  }
+
+  /* Remove line from last step */
+  .contract-process-step:last-child .contract-process-line {
+    display: none;
+  }
 }

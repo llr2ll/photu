@@ -63,11 +63,7 @@
   font-size: 28px;
   font-weight: 900;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(
-    135deg,
-    #fff,
-    rgba(255, 255, 255, 0.7)
-  );
+  background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.7));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -92,11 +88,7 @@
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(233, 30, 140, 0.2) 0%,
-    transparent 70%G
-  );
+  background: radial-gradient(circle, rgba(233, 30, 140, 0.2) 0%, transparent 70%);
 }
 
 .hero-camera {
@@ -142,24 +134,17 @@
   margin-top: 6px;
 }
 
-
 .hero-instagram-photo {
   position: absolute;
   left: -30px;
   top: 25px;
-
   width: 150px;
-
   z-index: 1;
-
   background: #111;
   border: 3px solid #222;
   border-radius: 10px;
-
   padding: 8px;
-
   transform: rotate(-10deg);
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
@@ -167,9 +152,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
   margin-bottom: 8px;
-
   color: rgba(255,255,255,0.8);
   font-size: 11px;
   font-weight: 600;
@@ -179,38 +162,76 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-
-  background: linear-gradient(
-    135deg,
-    var(--accent-pink),
-    var(--accent-cyan)
-  );
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-cyan));
 }
 
 .hero-instagram-photo-image {
   width: 100%;
   height: 120px;
-
   border-radius: 6px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: linear-gradient(
-    135deg,
-    #1a1a2e,
-    #16213e
-  );
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
 }
 
 .hero-instagram-photo-footer {
   display: flex;
   align-items: center;
   gap: 4px;
-
   margin-top: 8px;
-
   color: rgba(255,255,255,0.55);
   font-size: 11px;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 48px 20px 56px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(30px, 8vw, 48px);
+    margin-bottom: 16px;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-stats {
+    gap: 20px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat-number {
+    font-size: 22px;
+    justify-content: flex-start;
+  }
+
+  /* Hide visual column on mobile */
+  .hero-visual {
+    display: none;
+  }
 }

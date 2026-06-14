@@ -14,7 +14,6 @@
 
 .faq-title {
   margin-top: 20px;
-
   font-size: clamp(36px, 4vw, 56px);
   font-weight: 900;
   line-height: 1.1;
@@ -29,20 +28,15 @@
 .faq-item {
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
-
   background: rgba(255,255,255,.02);
-
   overflow: hidden;
 }
 
 .faq-question {
   padding: 24px 28px;
-
   cursor: pointer;
-
   font-size: 18px;
   font-weight: 700;
-
   list-style: none;
 }
 
@@ -52,7 +46,28 @@
 
 .faq-answer {
   padding: 0 28px 24px;
-
   color: rgba(255,255,255,.6);
   line-height: 1.8;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 64px 20px;
+  }
+
+  .faq-header {
+    margin-bottom: 36px;
+  }
+
+  .faq-question {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 18px;
+    font-size: 14px;
+  }
 }

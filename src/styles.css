@@ -24,6 +24,7 @@ body {
   color: var(--text-primary);
   font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -227,9 +228,7 @@ nav {
 .delay-4 { animation-delay: 0.4s; opacity: 0; }
 
 
-
-
-
+/* ─── NAVBAR ─────────────────────────────────────────────── */
 
 .navbar {
   padding: 0 40px;
@@ -239,7 +238,6 @@ nav {
   max-width: 1280px;
   margin: 0 auto;
   height: 68px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -285,7 +283,6 @@ nav {
   cursor: pointer;
   color: inherit;
   padding: 4px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,25 +300,20 @@ nav {
   position: absolute;
   top: -4px;
   right: -4px;
-
   width: 16px;
   height: 16px;
-
   border-radius: 50%;
   background: var(--accent-pink);
   color: white;
-
   font-size: 10px;
   font-weight: 700;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 
-
-
+/* ─── FOOTER ─────────────────────────────────────────────── */
 
 .footer {
   border-top: 1px solid var(--border-subtle);
@@ -358,21 +350,16 @@ nav {
 .footer-social-link {
   width: 36px;
   height: 36px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
-
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-
   font-size: 12px;
   font-weight: 700;
-
   transition: all 0.2s;
 }
 
@@ -384,7 +371,6 @@ nav {
 
 .footer-column-title {
   margin-bottom: 16px;
-
   color: white;
   font-size: 14px;
   font-weight: 700;
@@ -395,7 +381,6 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -415,12 +400,10 @@ nav {
 .footer-bottom {
   border-top: 1px solid var(--border-subtle);
   padding-top: 24px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-
   gap: 12px;
 }
 
@@ -442,3 +425,40 @@ nav {
 }
 
 .footer-bottom-link:hover { color: white }
+
+
+/* ─── NAVBAR MOBILE ──────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-container {
+    height: 58px;
+  }
+}
+
+/* ─── FOOTER MOBILE ──────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 48px 20px 32px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

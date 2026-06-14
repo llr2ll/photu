@@ -16,20 +16,14 @@
 .storymaker-badge {
   display: inline-flex;
   align-items: center;
-
   padding: 8px 14px;
-
   border: 1px solid rgba(233, 30, 140, 0.3);
   border-radius: 999px;
-
   background: rgba(233, 30, 140, 0.08);
-
   color: var(--accent-pink);
-
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
-
   margin-bottom: 24px;
 }
 
@@ -37,18 +31,14 @@
   font-size: clamp(42px, 5vw, 72px);
   line-height: 1.05;
   font-weight: 900;
-
   margin-bottom: 24px;
 }
 
 .storymaker-hero-description {
   max-width: 560px;
-
   font-size: 18px;
   line-height: 1.8;
-
   color: rgba(255,255,255,0.65);
-
   margin-bottom: 40px;
 }
 
@@ -78,7 +68,6 @@
 .storymaker-hero-visual {
   position: relative;
   min-height: 650px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,16 +85,11 @@
 
 .storymaker-floating-card {
   position: absolute;
-
   padding: 18px;
-
   border-radius: 18px;
-
   background: rgba(15,15,15,0.9);
   backdrop-filter: blur(12px);
-
   border: 1px solid var(--border-subtle);
-
   box-shadow: 0 20px 40px rgba(0,0,0,0.45);
 }
 
@@ -146,27 +130,126 @@
 .storymaker-hero-glow-top {
   top: -200px;
   right: 5%;
-
   width: 700px;
   height: 700px;
-
-  background: radial-gradient(
-    circle,
-    rgba(233,30,140,0.12) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(233,30,140,0.12) 0%, transparent 70%);
 }
 
 .storymaker-hero-glow-bottom {
   bottom: -150px;
   left: 0;
-
   width: 500px;
   height: 500px;
+  background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
+}
 
-  background: radial-gradient(
-    circle,
-    rgba(0,212,255,0.08) 0%,
-    transparent 70%
-  );
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .storymaker-hero {
+    padding: 60px 20px 48px;
+  }
+
+  .storymaker-hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .storymaker-badge {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  .storymaker-hero-title {
+    font-size: clamp(28px, 7vw, 48px);
+    margin-bottom: 16px;
+  }
+
+  .storymaker-hero-description {
+    max-width: 100%;
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .storymaker-hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .storymaker-hero-actions .btn-primary,
+  .storymaker-hero-actions .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .storymaker-hero-stats {
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .storymaker-hero-stats strong {
+    font-size: 22px;
+  }
+
+  /* Visual: show phone but smaller, no absolute floating cards */
+  .storymaker-hero-visual {
+    min-height: auto;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .storymaker-phone img {
+    max-height: 260px;
+  }
+
+  /* Convert floating cards to static inline row */
+  .storymaker-floating-card {
+    position: static;
+    padding: 12px 16px;
+    border-radius: 12px;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .storymaker-floating-card strong {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+  /* Wrap all 3 cards in a row below the phone */
+  .card-income,
+  .card-events,
+  .card-reels {
+    position: static;
+  }
+
+  /* We control layout via flex on the parent visual */
+  .storymaker-hero-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .storymaker-phone {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Wrap the 3 cards in a row — done via CSS only since JSX wraps them */
+  .card-income { order: 2; }
+  .card-events { order: 3; }
+  .card-reels  { order: 4; }
+
+  /* Simulate a row by making visual a flex column with phone + 3 cards below */
+  /* Cards row: use a pseudo-wrapper trick via adjacent display */
+  .card-income,
+  .card-events,
+  .card-reels {
+    width: 100%;
+    margin: 0;
+  }
 }

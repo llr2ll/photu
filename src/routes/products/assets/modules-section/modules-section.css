@@ -15,7 +15,6 @@
 
 .modules-title {
   margin: 20px 0;
-
   font-size: clamp(36px, 4vw, 56px);
   line-height: 1.1;
   font-weight: 900;
@@ -34,28 +33,21 @@
 
 .module-card {
   padding: 28px;
-
   background: rgba(255,255,255,0.02);
-
   border: 1px solid var(--border-subtle);
   border-radius: 24px;
-
   transition: all .3s ease;
 }
 
 .module-card:hover {
   transform: translateY(-4px);
-
   border-color: rgba(233,30,140,.3);
-
   background: rgba(233,30,140,.04);
 }
 
 .module-number {
   margin-bottom: 16px;
-
   color: var(--accent-pink);
-
   font-size: 14px;
   font-weight: 800;
   letter-spacing: .1em;
@@ -65,4 +57,31 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 1.4;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .modules-section {
+    padding: 64px 20px;
+  }
+
+  .modules-header {
+    margin-bottom: 40px;
+  }
+
+  .modules-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .module-card {
+    padding: 20px 24px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
