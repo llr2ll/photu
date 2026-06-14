@@ -1,30 +1,70 @@
 import './contract-details.css'
 
+const Includes = [
+  'Contrato profissional para fotógrafos',
+  'Arquivo totalmente editável',
+  'Pronto para personalização',
+  'Uso ilimitado',
+  'Pronto para impressão',
+  'Compatível com assinatura digital',
+]
+
 export function ContractDetails() {
   return (
-    <section className="contract-details">
-      <div className="container">
-        <h2>O que este contrato cobre</h2>
+    <section id="detalhes" className="contract-details">
+      <div className="contract-details-container">
+        <div className="contract-details-visual">
+          <div className="contract-details-document">
+            <div className="contract-details-document-header">
+              O QUE VOCÊ RECEBE
+            </div>
 
-        <div className="grid">
-          <div className="card">
-            <h3>📸 Serviço de Storymaker</h3>
-            <p>Cobertura de eventos, festas e produção de conteúdo social.</p>
+            {Includes.map(item => (
+              <div
+                key={item}
+                className="contract-details-item"
+              >
+                <span className="contract-details-check">
+                  ✓
+                </span>
+
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="contract-details-content">
+          <div className="section-label">
+            CONTEÚDO INCLUSO
           </div>
 
-          <div className="card">
-            <h3>📱 Entrega digital</h3>
-            <p>Reels, stories e materiais prontos para redes sociais.</p>
-          </div>
+          <h2 className="contract-details-title">
+            Tudo que você precisa para
+            <span className="gradient-text">
+              {' '}trabalhar com segurança
+            </span>
+          </h2>
 
-          <div className="card">
-            <h3>⏱ Prazo de entrega</h3>
-            <p>Definição clara de tempo para edição e entrega do material.</p>
-          </div>
+          <p className="contract-details-description">
+            Desenvolvido para fotógrafos que desejam profissionalizar
+            seus atendimentos, proteger seus serviços e formalizar
+            acordos com clientes de maneira simples e prática.
+          </p>
 
-          <div className="card">
-            <h3>🔒 Segurança jurídica</h3>
-            <p>Proteção para ambas as partes com termos simples e diretos.</p>
+          <div className="contract-details-list">
+            {Includes.map(item => (
+              <div
+                key={item}
+                className="contract-details-list-item"
+              >
+                <span className="contract-details-check">
+                  ✓
+                </span>
+
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </div>

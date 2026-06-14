@@ -1,38 +1,73 @@
 import './highlights-section.css'
 
+const Highlights = [
+  {
+    icon: '📸',
+    title: 'Cobertura em Tempo Real',
+    description:
+      'Stories e registros durante todo o evento sem perder os momentos mais importantes.',
+  },
+  {
+    icon: '⚡',
+    title: 'Conteúdo Pronto para Postar',
+    description:
+      'Reels e stories editados rapidamente para manter o engajamento enquanto o evento acontece.',
+  },
+  {
+    icon: '❤️',
+    title: 'Narrativa Emocional',
+    description:
+      'Transformamos acontecimentos em histórias capazes de gerar conexão e lembranças.',
+  },
+  {
+    icon: '📱',
+    title: 'Foco em Redes Sociais',
+    description:
+      'Conteúdo pensado para Instagram, TikTok e plataformas que exigem velocidade e impacto.',
+  },
+]
+
 export function HighlightsSection() {
   return (
     <section className="highlights-section">
       <div className="highlights-container">
         <div className="highlights-header">
-          <h2>
-            Muito mais que conteúdo, <span>memórias vivas</span>
+          <div className="section-label">
+            POR QUE ESCOLHER A PHOTU
+          </div>
+
+          <h2 className="highlights-title">
+            Muito mais que conteúdo,
+            <span className="gradient-text">
+              {' '}memórias vivas
+            </span>
           </h2>
-          <p>
-            Transformamos momentos reais em histórias que as pessoas sentem
+
+          <p className="highlights-description">
+            Cada evento tem uma história única. Nossa missão é registrar
+            emoções, bastidores e momentos que merecem ser lembrados.
           </p>
         </div>
 
         <div className="highlights-grid">
-          <div className="highlight-card">
-            <h3>📸 Cobertura em tempo real</h3>
-            <p>Stories e registros durante o evento, sem perder nenhum momento importante.</p>
-          </div>
+          {Highlights.map(item => (
+            <div
+              key={item.title}
+              className="highlight-card"
+            >
+              <div className="highlight-icon">
+                {item.icon}
+              </div>
 
-          <div className="highlight-card">
-            <h3>⚡ Conteúdo pronto pra postar</h3>
-            <p>Reels e stories editados com qualidade profissional e entregues rápido.</p>
-          </div>
+              <h3 className="highlight-title">
+                {item.title}
+              </h3>
 
-          <div className="highlight-card">
-            <h3>❤️ Narrativa emocional</h3>
-            <p>Não é só filmar — é contar a história do evento com sentimento.</p>
-          </div>
-
-          <div className="highlight-card">
-            <h3>📱 Foco em redes sociais</h3>
-            <p>Conteúdo pensado para Instagram, TikTok e alta performance.</p>
-          </div>
+              <p className="highlight-description">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

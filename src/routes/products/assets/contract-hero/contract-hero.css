@@ -1,57 +1,226 @@
 .contract-hero {
-  padding: 100px 40px;
-  background: radial-gradient(circle at top, rgba(233, 30, 140, 0.12), transparent 60%), #0b0b10;
-  color: white;
+    position: relative;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(10, 10, 10, 0.4) 70%,
+            #0a0a0a 100%
+        );
 }
 
-.contract-container {
-  max-width: 1000px;
+.contract-hero-container {
+  max-width: 1280px;
   margin: 0 auto;
-  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.badge {
-  display: inline-block;
-  padding: 6px 12px;
-  border: 1px solid rgba(233, 30, 140, 0.4);
+.contract-badge {
+  display: inline-flex;
+
+  padding: 8px 14px;
+
   border-radius: 999px;
+
+  background: rgba(233,30,140,.08);
+  border: 1px solid rgba(233,30,140,.25);
+
+  color: var(--accent-pink);
+
   font-size: 12px;
-  color: #e91e8c;
-  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: .08em;
+
+  margin-bottom: 24px;
 }
 
-.contract-hero h1 {
-  font-size: 42px;
-  margin-bottom: 16px;
+.contract-title {
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 900;
+  line-height: 1.05;
+
+  margin-bottom: 24px;
 }
 
-.contract-hero p {
+.contract-description {
+  max-width: 560px;
+
+  color: rgba(255,255,255,.65);
+
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 700px;
-  margin: 0 auto 30px;
+  line-height: 1.8;
+
+  margin-bottom: 40px;
 }
 
-.hero-actions {
+.contract-actions {
   display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contract-stats {
+  display: flex;
+  gap: 48px;
+
+  margin-top: 48px;
+}
+
+.contract-stats strong {
+  display: block;
+
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.contract-stats span {
+  color: rgba(255,255,255,.45);
+  font-size: 13px;
+}
+
+.contract-visual {
+  position: relative;
+
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+.contract-document {
+  width: 380px;
+
+  background: #fff;
+
+  color: #111;
+
+  border-radius: 20px;
+
+  padding: 28px;
+
+  box-shadow: 0 30px 60px rgba(0,0,0,.5);
+
+  transform: rotate(-4deg);
+
+  position: relative;
+  z-index: 2;
+}
+
+.contract-document-header {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+
+  margin-bottom: 24px;
+}
+
+.contract-document-lines {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
-.primary {
-  background: #e91e8c;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
+.contract-document-line {
+  height: 8px;
+
+  border-radius: 999px;
+
+  background: rgba(0,0,0,.08);
 }
 
-.secondary {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 12px 20px;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
+.contract-signature {
+  margin-top: 40px;
+
+  font-style: italic;
+  color: rgba(0,0,0,.5);
+}
+
+.contract-floating-card {
+  position: absolute;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: rgba(15,15,15,.95);
+
+  border: 1px solid var(--border-subtle);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,.45);
+}
+
+.contract-floating-card span {
+  display: block;
+
+  color: rgba(255,255,255,.5);
+
+  font-size: 12px;
+
+  margin-bottom: 6px;
+}
+
+.contract-floating-card strong {
+  font-size: 14px;
+}
+
+.contract-card-security {
+  top: 40px;
+  right: 0;
+  z-index: 2;
+}
+
+.contract-card-payment {
+  left: 0;
+  bottom: 120px;
+  z-index: 2;
+}
+
+.contract-card-rights {
+  right: 20px;
+  bottom: 20px;
+}
+
+.contract-hero-glow {
+  position: absolute;
+  pointer-events: none;
+}
+
+.contract-hero-glow-top {
+  top: -200px;
+  right: 10%;
+
+  width: 700px;
+  height: 700px;
+
+  background: radial-gradient(
+    circle,
+    rgba(233,30,140,.12) 0%,
+    transparent 70%
+  );
+}
+
+.contract-hero-glow-bottom {
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+
+    width: 700px;
+    height: 700px;
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 212, 255, 0.08) 0%,
+        rgba(0, 212, 255, 0.04) 40%,
+        rgba(10, 10, 10, 0.6) 75%,
+        #0a0a0a 100%
+    );
+
+    pointer-events: none;
 }

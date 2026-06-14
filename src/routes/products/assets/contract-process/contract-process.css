@@ -1,32 +1,95 @@
 .contract-process {
-  padding: 90px 40px;
-  background: #0b0b10;
-  color: white;
+  padding: 120px 40px;
 }
 
-.container {
-  max-width: 1000px;
+.contract-process-container {
+  max-width: 1280px;
   margin: 0 auto;
+}
+
+.contract-process-header {
+  max-width: 760px;
+
   text-align: center;
+
+  margin: 0 auto 80px;
 }
 
-.steps {
+.contract-process-title {
+  margin: 20px 0;
+
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.contract-process-description {
+  color: rgba(255,255,255,.6);
+  line-height: 1.8;
+}
+
+.contract-process-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  position: relative;
+}
+
+.contract-process-step {
+  position: relative;
+
+  text-align: center;
+
+  padding: 32px 24px;
+}
+
+.contract-process-number {
+  width: 72px;
+  height: 72px;
+
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+
+  margin: 0 auto 24px;
+
+  border-radius: 50%;
+
+  background: rgba(233,30,140,.12);
+
+  border: 1px solid rgba(233,30,140,.2);
+
+  color: var(--accent-pink);
+
+  font-size: 20px;
+  font-weight: 900;
 }
 
-.step {
-  background: rgba(255, 255, 255, 0.04);
-  padding: 20px;
-  border-radius: 12px;
-  min-width: 200px;
-}
+.contract-process-step-title {
+  margin-bottom: 12px;
 
-.step span {
-  display: block;
   font-size: 22px;
-  color: #e91e8c;
-  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contract-process-step-description {
+  color: rgba(255,255,255,.6);
+  line-height: 1.7;
+}
+
+.contract-process-line {
+  position: absolute;
+
+  top: 68px;
+  left: calc(50% + 48px);
+
+  width: calc(100% - 96px);
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(233,30,140,.4),
+    rgba(233,30,140,.1)
+  );
 }
