@@ -24,12 +24,3 @@ function RouteComponent() {
     <CtaSection/>
   </>
 }
-
-// hero.tsx          /*__*/
-// market-section.tsx /*__*/
-// modules-section.tsx /*__*/
-// highlights-section.tsx
-// results-section.tsx /*__*/
-// bonus-section.tsx /*__*/
-// faq-section.xtsx/*__*/
-// cta-section.ts /*__*/

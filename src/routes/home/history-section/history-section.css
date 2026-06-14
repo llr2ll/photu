@@ -1,0 +1,249 @@
+.history-section {
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.history-bg-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.history-bg-glow-left {
+  top: 0;
+  left: -200px;
+  background: radial-gradient(circle, rgba(233, 30, 140, 0.08) 0%, transparent 70%);
+}
+
+.history-bg-glow-right {
+  bottom: 0;
+  right: -200px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
+}
+
+/* ─── HEADER ─────────────────────────────────────────────── */
+
+.history-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.history-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 72px;
+}
+
+.history-title {
+  margin: 16px 0 20px;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.history-subtitle {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* ─── GRID ───────────────────────────────────────────────── */
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ─── CARD ───────────────────────────────────────────────── */
+
+.history-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(233, 30, 140, 0.25);
+  background: rgba(233, 30, 140, 0.04);
+}
+
+/* Top row: avatar + user + ig icon */
+
+.history-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.history-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e91e8c, #ff6b35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.history-user-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.history-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-handle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.history-ig-icon {
+  color: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.history-card:hover .history-ig-icon {
+  color: var(--accent-pink);
+}
+
+/* Event tag */
+
+.history-event-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.02em;
+}
+
+/* Quote text */
+
+.history-text {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* Footer */
+
+.history-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.history-hearts {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-pink);
+}
+
+.history-verified {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: rgba(0, 212, 255, 0.7);
+}
+
+/* ─── CTA ────────────────────────────────────────────────── */
+
+.history-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+.history-ig-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(233, 30, 140, 0.35);
+  background: rgba(233, 30, 140, 0.08);
+  color: var(--accent-pink);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.history-ig-button:hover {
+  background: rgba(233, 30, 140, 0.18);
+  border-color: rgba(233, 30, 140, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(233, 30, 140, 0.2);
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .history-section {
+    padding: 64px 20px;
+  }
+
+  .history-header {
+    margin-bottom: 40px;
+  }
+
+  .history-subtitle {
+    font-size: 15px;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .history-card {
+    padding: 22px 20px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .history-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

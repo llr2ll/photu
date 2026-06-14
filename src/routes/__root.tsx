@@ -68,7 +68,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                     <ul className="footer-links-list">
                       {col.links.map(link => (
                         <li key={link.label}>
-                          <a href={link.url} className="footer-link" target="_blank" rel="noopener noreferrer">{link.label}</a>
+                          <a href={link.url} className="footer-link" target={link.target ? "_blank" : undefined} rel="noopener noreferrer">{link.label}</a>
                         </li>
                       ))}
                     </ul>

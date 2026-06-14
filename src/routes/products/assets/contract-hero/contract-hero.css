@@ -250,4 +250,9 @@
   .contract-card-rights {
     position: static;
   }
+
+  .contract-hero-glow-bottom {
+    width: 100%;
+    max-width: 100%;
+  }
 }

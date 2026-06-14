@@ -4,24 +4,24 @@ export const FooterLinks = [
     { 
         title: 'Produtos', 
         links: [
-            { label: 'Curso Storymaker', url: WhatsappLink },
-            { label: 'Contratos Jurídicos', url: WhatsappLink },
-            { label: 'Reviva Suas Fotos', url: WhatsappLink },
+            { label: 'Curso Storymaker', url: '/products/storymaker-course', target: false },
+            { label: 'Contratos Jurídicos', url: '/products/contract', target: false },
+            { label: 'Reviva Suas Fotos', url: '/products/image-editor', target: false },
         ] 
     },
     { 
         title: 'Serviços', 
         links: [
-            { label: 'Storymaker', url: WhatsappLink },
-            { label: 'Fotografia', url: WhatsappLink },
+            { label: 'Storymaker', url: WhatsappLink, target: true },
+            { label: 'Fotografia', url: WhatsappLink, target: true },
         ] 
     },
     {   
         title: 'Empresa', 
         links: [
-            { label: 'Sobre Nós', url: WhatsappLink },
-            { label: 'Portifólio', url: WhatsappLink },
-            { label: 'Contato', url: WhatsappLink },
+            { label: 'Nossa História', url: '/#our-history', target: false },
+            { label: 'Portifólio', url: "https://www.instagram.com/studioyastrees", target: true },
+            { label: 'Contato', url: WhatsappLink, target: true },
         ] 
     },
 ]
