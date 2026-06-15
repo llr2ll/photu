@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesStorymakerServiceRouteImport } from './routes/services/storymaker-service'
 import { Route as ProductsStorymakerCourseRouteImport } from './routes/products/storymaker-course'
 import { Route as ProductsImageEditorRouteImport } from './routes/products/image-editor'
 import { Route as ProductsContractRouteImport } from './routes/products/contract'
@@ -19,6 +20,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesStorymakerServiceRoute =
+  ServicesStorymakerServiceRouteImport.update({
+    id: '/services/storymaker-service',
+    path: '/services/storymaker-service',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProductsStorymakerCourseRoute =
   ProductsStorymakerCourseRouteImport.update({
     id: '/products/storymaker-course',
@@ -41,12 +48,14 @@ export interface FileRoutesByFullPath {
   '/products/contract': typeof ProductsContractRoute
   '/products/image-editor': typeof ProductsImageEditorRoute
   '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
+  '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/products/contract': typeof ProductsContractRoute
   '/products/image-editor': typeof ProductsImageEditorRoute
   '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
+  '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -54,6 +63,7 @@ export interface FileRoutesById {
   '/products/contract': typeof ProductsContractRoute
   '/products/image-editor': typeof ProductsImageEditorRoute
   '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
+  '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -62,18 +72,21 @@ export interface FileRouteTypes {
     | '/products/contract'
     | '/products/image-editor'
     | '/products/storymaker-course'
+    | '/services/storymaker-service'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/products/contract'
     | '/products/image-editor'
     | '/products/storymaker-course'
+    | '/services/storymaker-service'
   id:
     | '__root__'
     | '/'
     | '/products/contract'
     | '/products/image-editor'
     | '/products/storymaker-course'
+    | '/services/storymaker-service'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -81,6 +94,7 @@ export interface RootRouteChildren {
   ProductsContractRoute: typeof ProductsContractRoute
   ProductsImageEditorRoute: typeof ProductsImageEditorRoute
   ProductsStorymakerCourseRoute: typeof ProductsStorymakerCourseRoute
+  ServicesStorymakerServiceRoute: typeof ServicesStorymakerServiceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -90,6 +104,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/storymaker-service': {
+      id: '/services/storymaker-service'
+      path: '/services/storymaker-service'
+      fullPath: '/services/storymaker-service'
+      preLoaderRoute: typeof ServicesStorymakerServiceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products/storymaker-course': {
@@ -121,6 +142,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProductsContractRoute: ProductsContractRoute,
   ProductsImageEditorRoute: ProductsImageEditorRoute,
   ProductsStorymakerCourseRoute: ProductsStorymakerCourseRoute,
+  ServicesStorymakerServiceRoute: ServicesStorymakerServiceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

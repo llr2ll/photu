@@ -75,37 +75,107 @@
   margin-top: 2px;
 }
 
+/* ── VISUAL COLUMN ── */
 .hero-visual {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 420px;
+  min-height: 480px;
 }
 
+/* Central glow orb */
 .hero-camera-glow {
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(233, 30, 140, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(233, 30, 140, 0.18) 0%, transparent 70%);
 }
 
-.hero-camera {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-cage {
+/* ── LENS RING — topo centro, acima do card ── */
+.hero-lens-ring {
   position: absolute;
-  top: 0;
-  height: 450px;
+  z-index: 2;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: spin-slow 20s linear infinite;
 }
 
+.hero-lens-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes spin-slow {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to   { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* ── FILM STRIP ESQUERDO — inclinado / flutuando ── */
+.hero-film-strip {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-52%) rotate(-8deg);
+  z-index: 3;
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 6px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  animation: float-left 5s ease-in-out infinite;
+}
+
+@keyframes float-left {
+  0%, 100% { transform: translateY(-52%) rotate(-8deg); }
+  50%       { transform: translateY(-58%) rotate(-6deg); }
+}
+
+.hero-film-holes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  bottom: 6px;
+}
+
+.hero-film-hole {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.hero-film-frames {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 8px;
+}
+
+.hero-film-frame {
+  width: 52px;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ── PHOTO STRIP DIREITO — mantido onde estava ── */
 .hero-photo-strip {
   position: absolute;
-  right: 0px;
-  top: 20px;
+  right: 30px;
+  top: 65px;
   z-index: 3;
   transform: rotate(12deg);
   background: #111;
@@ -113,6 +183,12 @@
   border-radius: 6px;
   padding: 6px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  animation: float-right 4.5s ease-in-out infinite;
+}
+
+@keyframes float-right {
+  0%, 100% { transform: rotate(12deg) translateY(0px); }
+  50%       { transform: rotate(12deg) translateY(-10px); }
 }
 
 .hero-photo-item {
@@ -134,18 +210,25 @@
   margin-top: 6px;
 }
 
+/* ── INSTAGRAM CARD — centralizado ── */
 .hero-instagram-photo {
   position: absolute;
-  left: -30px;
-  top: 25px;
-  width: 150px;
-  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  z-index: 4;
   background: #111;
   border: 3px solid #222;
   border-radius: 10px;
   padding: 8px;
-  transform: rotate(-10deg);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.7);
+  animation: float-center 6s ease-in-out infinite;
+}
+
+@keyframes float-center {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+  50%       { transform: translate(-50%, -50%) translateY(-8px); }
 }
 
 .hero-instagram-photo-header {
@@ -172,7 +255,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.hero-instagram-photo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preenche todo o espaço */
+  display: block;
 }
 
 .hero-instagram-photo-footer {
@@ -182,6 +273,171 @@
   margin-top: 8px;
   color: rgba(255,255,255,0.55);
   font-size: 11px;
+}
+
+/* ── LIVE BADGE — mantido ── */
+.hero-live-badge {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(233,30,140,0.15);
+  border: 1px solid rgba(233,30,140,0.4);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--accent-pink);
+  backdrop-filter: blur(8px);
+}
+
+.hero-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-pink);
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* ── SHUTTER COUNTER — mantido ── */
+.hero-shutter-card {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(10,10,10,0.92);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 14px;
+  padding: 12px 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+}
+
+.hero-shutter-label {
+  display: block;
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 2px;
+}
+
+.hero-shutter-count {
+  display: block;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--accent-cyan);
+}
+
+/* ── STORY / WAVEFORM BAR — mantido ── */
+.hero-story-bar {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(10,10,10,0.92);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 10px 14px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+}
+
+.hero-story-avatar {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-story-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-cyan));
+  -webkit-mask: radial-gradient(circle, transparent 60%, black 61%);
+  mask: radial-gradient(circle, transparent 60%, black 61%);
+}
+
+.hero-story-name {
+  display: block;
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 4px;
+}
+
+.hero-story-wave {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero-story-bar-seg {
+  width: 3px;
+  border-radius: 2px;
+  background: var(--accent-pink);
+  animation: wave-bounce 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes wave-bounce {
+  from { transform: scaleY(0.4); opacity: 0.5; }
+  to   { transform: scaleY(1);   opacity: 1; }
+}
+
+/* ── SPARKLES ── */
+.hero-sparkle {
+  position: absolute;
+  color: var(--accent-pink);
+  font-size: 14px;
+  pointer-events: none;
+  animation: sparkle-float 3s ease-in-out infinite;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.hero-sparkle-1 {
+  top: 90px;
+  right: 150px;
+  font-size: 16px;
+  animation-delay: 0s;
+  color: var(--accent-cyan);
+}
+
+.hero-sparkle-2 {
+  bottom: 100px;
+  left: 100px;
+  font-size: 16px;
+  animation-delay: 1s;
+}
+
+.hero-sparkle-3 {
+  top: 55%;
+  right: -5px;
+  font-size: 16px;
+  animation-delay: 2s;
+  color: var(--accent-yellow);
+}
+
+@keyframes sparkle-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+  50% { transform: translateY(-8px) rotate(20deg); opacity: 1; }
 }
 
 /* ─── MOBILE ─────────────────────────────────────────────── */
@@ -230,7 +486,6 @@
     justify-content: flex-start;
   }
 
-  /* Hide visual column on mobile */
   .hero-visual {
     display: none;
   }

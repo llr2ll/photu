@@ -1,7 +1,7 @@
+import { FooterLinks, SocialLinks, PaymentMethodLinks } from '@/data/footer-links'
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { CartIcon, PhotuLogo, UserIcon } from '@/data/icons.tsx'
 import { useNavigate } from '@tanstack/react-router'
-import { FooterLinks } from '@/data/footer-links'
 import '../styles.css'
 
 export const Route = createRootRoute({
@@ -55,13 +55,15 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                   </p>
 
                   <div className="footer-socials">
-                    {['instagram', 'youtube', 'tiktok', 'facebook'].map(social => (
-                      <a key={social} href="#" className="footer-social-link">{social[0].toUpperCase()}</a>
+                    {SocialLinks.map(social => (
+                      <a key={social.name} href={social.url} target="_blank" className="footer-social-link">
+                        {social.name[0].toUpperCase()}
+                      </a>
                     ))}
                   </div>
                 </div>
 
-                {FooterLinks.map(col => (
+                {FooterLinks.map((col, index) => (
                   <div key={col.title}>
                     <div className="footer-column-title">{col.title}</div>
 
@@ -72,6 +74,20 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                         </li>
                       ))}
                     </ul>
+
+                    {index === 2 && (
+  <div className="footer-payments">
+    {PaymentMethodLinks.map((paymentMethod) => (
+      <img
+        key={paymentMethod.name}
+        className="footer-payment-icon"
+        src={paymentMethod.img}
+        alt={paymentMethod.name}
+        loading="lazy"
+      />
+    ))}
+  </div>
+)}
                   </div>
                 ))}
               </div>
@@ -88,14 +104,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             </div>
           </footer>
         </div>
+        <script src="node_modules/eruda/eruda.js"></script>
+        <script>eruda.init();</script>
       </body>
     </html>
   )
 }
-
-
-{/* <div className="navbar-links">
-  <Link to="/" className="navbar-link" activeProps={{ className: 'navbar-link active' }}>Início</Link>
-  <Link to="/products" className="navbar-link" activeProps={{ className: 'navbar-link active' }}>Produtos</Link>  
-  <Link to="/services" className="navbar-link" activeProps={{ className: 'navbar-link active' }}>Serviços</Link>
-</div> */}
