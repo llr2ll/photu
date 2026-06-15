@@ -27,13 +27,13 @@ export const Products = [
     {
         title: 'Reviva Suas Fotos',
         desc: 'Restauração e edição profissional de fotografias antigas.',
-        price: 'Em Breve',
+        price: 'R$24,90',
         badge: 'Novo',
         badgeColor: 'var(--accent-orange)',
         rating: 4,
         students: '567',
         icon: <img src="/old-photo.jpeg" alt='Reviva Suas Fotos' />,
         gradient: 'linear-gradient(135deg, #1a1000, #2d1c00)',
-        route: null
+        route: '/products/image-editor'
     },
 ]

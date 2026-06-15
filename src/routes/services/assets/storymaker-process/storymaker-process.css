@@ -1,0 +1,126 @@
+.sm-process {
+  padding: 120px 40px;
+}
+
+.sm-process-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.sm-process-header {
+  max-width: 760px;
+  text-align: center;
+  margin: 0 auto 80px;
+}
+
+.sm-process-title {
+  margin: 20px 0;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.sm-process-description {
+  color: rgba(255,255,255,.6);
+  line-height: 1.8;
+}
+
+.sm-process-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.sm-process-step {
+  position: relative;
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.sm-process-number {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: rgba(233,30,140,.12);
+  border: 1px solid rgba(233,30,140,.2);
+  color: var(--accent-pink);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.sm-process-step-title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sm-process-step-description {
+  color: rgba(255,255,255,.6);
+  line-height: 1.7;
+}
+
+.sm-process-line {
+  position: absolute;
+  top: 68px;
+  left: calc(50% + 48px);
+  width: calc(100% - 96px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(233,30,140,.4), rgba(233,30,140,.1));
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .sm-process {
+    padding: 64px 20px;
+  }
+
+  .sm-process-header {
+    margin-bottom: 48px;
+  }
+
+  .sm-process-timeline {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .sm-process-step {
+    text-align: left;
+    padding: 0 0 0 80px;
+    padding-bottom: 36px;
+    position: relative;
+  }
+
+  .sm-process-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 56px;
+    height: 56px;
+    font-size: 16px;
+  }
+
+  .sm-process-step-title {
+    font-size: 18px;
+    padding-top: 12px;
+  }
+
+  .sm-process-line {
+    position: absolute;
+    top: 56px;
+    left: 27px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background: linear-gradient(180deg, rgba(233,30,140,.4), rgba(233,30,140,.1));
+  }
+
+  .sm-process-step:last-child .sm-process-line {
+    display: none;
+  }
+}

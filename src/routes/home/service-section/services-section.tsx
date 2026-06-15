@@ -1,5 +1,4 @@
 
-import { WhatsappLink } from '@/data/footer-links';
 import { ArrowRightIcon } from '@/data/icons';
 import './services-section.css';
 
@@ -38,8 +37,8 @@ export function ServiceSection() {
                 ))}
               </div>
 
-              <a href={WhatsappLink} className="btn-primary" target="_blank" rel="noopener noreferrer">
-                Contratar
+              <a href="/services/storymaker-service" className="btn-primary" rel="noopener noreferrer">
+                Ver Pacotes
                 <ArrowRightIcon />
               </a>
 

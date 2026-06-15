@@ -1,0 +1,151 @@
+.sm-cta {
+  position: relative;
+  padding: 140px 40px;
+  overflow: hidden;
+}
+
+.sm-cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(233,30,140,.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sm-cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sm-cta-card {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 72px 64px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(233,30,140,.15);
+  backdrop-filter: blur(20px);
+}
+
+.sm-cta-badge {
+  display: inline-flex;
+  padding: 10px 18px;
+  margin-bottom: 24px;
+  border-radius: 999px;
+  background: rgba(233,30,140,.1);
+  border: 1px solid rgba(233,30,140,.25);
+  color: var(--accent-pink);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.sm-cta-title {
+  margin-bottom: 24px;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.sm-cta-description {
+  max-width: 600px;
+  margin: 0 auto 48px;
+  color: rgba(255,255,255,.65);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.sm-cta-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-bottom: 48px;
+}
+
+.sm-cta-stat strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff, rgba(255,255,255,.75));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sm-cta-stat span {
+  color: rgba(255,255,255,.45);
+  font-size: 13px;
+}
+
+.sm-cta-button {
+  font-size: 18px;
+  padding: 22px 48px;
+}
+
+.sm-cta-social {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: rgba(255,255,255,.4);
+  font-size: 14px;
+}
+
+.sm-cta-instagram {
+  color: var(--accent-pink);
+  text-decoration: none;
+  font-weight: 700;
+  transition: opacity .2s;
+}
+
+.sm-cta-instagram:hover {
+  opacity: .8;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .sm-cta {
+    padding: 64px 20px;
+  }
+
+  .sm-cta-card {
+    padding: 40px 24px;
+    border-radius: 24px;
+  }
+
+  .sm-cta-title {
+    font-size: clamp(28px, 8vw, 48px);
+  }
+
+  .sm-cta-description {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .sm-cta-numbers {
+    gap: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .sm-cta-stat strong {
+    font-size: 28px;
+  }
+
+  .sm-cta-button {
+    font-size: 15px;
+    padding: 18px 28px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sm-cta-social {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
