@@ -14,6 +14,7 @@ import { Route as ServicesStorymakerServiceRouteImport } from './routes/services
 import { Route as ProductsStorymakerCourseRouteImport } from './routes/products/storymaker-course'
 import { Route as ProductsImageEditorRouteImport } from './routes/products/image-editor'
 import { Route as ProductsContractRouteImport } from './routes/products/contract'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -42,6 +43,11 @@ const ProductsContractRoute = ProductsContractRouteImport.update({
   path: '/products/contract',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -49,6 +55,7 @@ export interface FileRoutesByFullPath {
   '/products/image-editor': typeof ProductsImageEditorRoute
   '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
   '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -56,6 +63,7 @@ export interface FileRoutesByTo {
   '/products/image-editor': typeof ProductsImageEditorRoute
   '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
   '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -64,6 +72,7 @@ export interface FileRoutesById {
   '/products/image-editor': typeof ProductsImageEditorRoute
   '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
   '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -73,6 +82,7 @@ export interface FileRouteTypes {
     | '/products/image-editor'
     | '/products/storymaker-course'
     | '/services/storymaker-service'
+    | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -80,6 +90,7 @@ export interface FileRouteTypes {
     | '/products/image-editor'
     | '/products/storymaker-course'
     | '/services/storymaker-service'
+    | '/api/auth/$'
   id:
     | '__root__'
     | '/'
@@ -87,6 +98,7 @@ export interface FileRouteTypes {
     | '/products/image-editor'
     | '/products/storymaker-course'
     | '/services/storymaker-service'
+    | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -95,6 +107,7 @@ export interface RootRouteChildren {
   ProductsImageEditorRoute: typeof ProductsImageEditorRoute
   ProductsStorymakerCourseRoute: typeof ProductsStorymakerCourseRoute
   ServicesStorymakerServiceRoute: typeof ServicesStorymakerServiceRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -134,6 +147,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsContractRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -143,6 +163,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProductsImageEditorRoute: ProductsImageEditorRoute,
   ProductsStorymakerCourseRoute: ProductsStorymakerCourseRoute,
   ServicesStorymakerServiceRoute: ServicesStorymakerServiceRoute,
+  ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
