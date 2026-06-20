@@ -9,109 +9,122 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StorymakerServiceRouteImport } from './routes/storymaker-service'
+import { Route as StorymakerCourseRouteImport } from './routes/storymaker-course'
+import { Route as ImageEditorRouteImport } from './routes/image-editor'
+import { Route as ContractRouteImport } from './routes/contract'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ServicesStorymakerServiceRouteImport } from './routes/services/storymaker-service'
-import { Route as ProductsStorymakerCourseRouteImport } from './routes/products/storymaker-course'
-import { Route as ProductsImageEditorRouteImport } from './routes/products/image-editor'
-import { Route as ProductsContractRouteImport } from './routes/products/contract'
-import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
+const StorymakerServiceRoute = StorymakerServiceRouteImport.update({
+  id: '/storymaker-service',
+  path: '/storymaker-service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StorymakerCourseRoute = StorymakerCourseRouteImport.update({
+  id: '/storymaker-course',
+  path: '/storymaker-course',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImageEditorRoute = ImageEditorRouteImport.update({
+  id: '/image-editor',
+  path: '/image-editor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContractRoute = ContractRouteImport.update({
+  id: '/contract',
+  path: '/contract',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesStorymakerServiceRoute =
-  ServicesStorymakerServiceRouteImport.update({
-    id: '/services/storymaker-service',
-    path: '/services/storymaker-service',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProductsStorymakerCourseRoute =
-  ProductsStorymakerCourseRouteImport.update({
-    id: '/products/storymaker-course',
-    path: '/products/storymaker-course',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProductsImageEditorRoute = ProductsImageEditorRouteImport.update({
-  id: '/products/image-editor',
-  path: '/products/image-editor',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProductsContractRoute = ProductsContractRouteImport.update({
-  id: '/products/contract',
-  path: '/products/contract',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
-  id: '/api/auth/$',
-  path: '/api/auth/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/products/contract': typeof ProductsContractRoute
-  '/products/image-editor': typeof ProductsImageEditorRoute
-  '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
-  '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
+  '/contract': typeof ContractRoute
+  '/image-editor': typeof ImageEditorRoute
+  '/storymaker-course': typeof StorymakerCourseRoute
+  '/storymaker-service': typeof StorymakerServiceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/products/contract': typeof ProductsContractRoute
-  '/products/image-editor': typeof ProductsImageEditorRoute
-  '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
-  '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
+  '/contract': typeof ContractRoute
+  '/image-editor': typeof ImageEditorRoute
+  '/storymaker-course': typeof StorymakerCourseRoute
+  '/storymaker-service': typeof StorymakerServiceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/products/contract': typeof ProductsContractRoute
-  '/products/image-editor': typeof ProductsImageEditorRoute
-  '/products/storymaker-course': typeof ProductsStorymakerCourseRoute
-  '/services/storymaker-service': typeof ServicesStorymakerServiceRoute
-  '/api/auth/$': typeof ApiAuthSplatRoute
+  '/contract': typeof ContractRoute
+  '/image-editor': typeof ImageEditorRoute
+  '/storymaker-course': typeof StorymakerCourseRoute
+  '/storymaker-service': typeof StorymakerServiceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/products/contract'
-    | '/products/image-editor'
-    | '/products/storymaker-course'
-    | '/services/storymaker-service'
-    | '/api/auth/$'
+    | '/contract'
+    | '/image-editor'
+    | '/storymaker-course'
+    | '/storymaker-service'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/products/contract'
-    | '/products/image-editor'
-    | '/products/storymaker-course'
-    | '/services/storymaker-service'
-    | '/api/auth/$'
+    | '/contract'
+    | '/image-editor'
+    | '/storymaker-course'
+    | '/storymaker-service'
   id:
     | '__root__'
     | '/'
-    | '/products/contract'
-    | '/products/image-editor'
-    | '/products/storymaker-course'
-    | '/services/storymaker-service'
-    | '/api/auth/$'
+    | '/contract'
+    | '/image-editor'
+    | '/storymaker-course'
+    | '/storymaker-service'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ProductsContractRoute: typeof ProductsContractRoute
-  ProductsImageEditorRoute: typeof ProductsImageEditorRoute
-  ProductsStorymakerCourseRoute: typeof ProductsStorymakerCourseRoute
-  ServicesStorymakerServiceRoute: typeof ServicesStorymakerServiceRoute
-  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ContractRoute: typeof ContractRoute
+  ImageEditorRoute: typeof ImageEditorRoute
+  StorymakerCourseRoute: typeof StorymakerCourseRoute
+  StorymakerServiceRoute: typeof StorymakerServiceRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/storymaker-service': {
+      id: '/storymaker-service'
+      path: '/storymaker-service'
+      fullPath: '/storymaker-service'
+      preLoaderRoute: typeof StorymakerServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/storymaker-course': {
+      id: '/storymaker-course'
+      path: '/storymaker-course'
+      fullPath: '/storymaker-course'
+      preLoaderRoute: typeof StorymakerCourseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/image-editor': {
+      id: '/image-editor'
+      path: '/image-editor'
+      fullPath: '/image-editor'
+      preLoaderRoute: typeof ImageEditorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contract': {
+      id: '/contract'
+      path: '/contract'
+      fullPath: '/contract'
+      preLoaderRoute: typeof ContractRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -119,51 +132,15 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/storymaker-service': {
-      id: '/services/storymaker-service'
-      path: '/services/storymaker-service'
-      fullPath: '/services/storymaker-service'
-      preLoaderRoute: typeof ServicesStorymakerServiceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products/storymaker-course': {
-      id: '/products/storymaker-course'
-      path: '/products/storymaker-course'
-      fullPath: '/products/storymaker-course'
-      preLoaderRoute: typeof ProductsStorymakerCourseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products/image-editor': {
-      id: '/products/image-editor'
-      path: '/products/image-editor'
-      fullPath: '/products/image-editor'
-      preLoaderRoute: typeof ProductsImageEditorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products/contract': {
-      id: '/products/contract'
-      path: '/products/contract'
-      fullPath: '/products/contract'
-      preLoaderRoute: typeof ProductsContractRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/auth/$': {
-      id: '/api/auth/$'
-      path: '/api/auth/$'
-      fullPath: '/api/auth/$'
-      preLoaderRoute: typeof ApiAuthSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ProductsContractRoute: ProductsContractRoute,
-  ProductsImageEditorRoute: ProductsImageEditorRoute,
-  ProductsStorymakerCourseRoute: ProductsStorymakerCourseRoute,
-  ServicesStorymakerServiceRoute: ServicesStorymakerServiceRoute,
-  ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ContractRoute: ContractRoute,
+  ImageEditorRoute: ImageEditorRoute,
+  StorymakerCourseRoute: StorymakerCourseRoute,
+  StorymakerServiceRoute: StorymakerServiceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

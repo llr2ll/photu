@@ -8,7 +8,7 @@ export const Products = [
         badgeColor: 'var(--accent-pink)',
         rating: 5,
         students: '1.2k',
-        icon: <img src="/camera.jpeg" alt='Reviva Suas Fotos' />,
+        icon: <img src="/camera.jpeg" alt='Reviva Suas Fotos'/>,
         gradient: 'linear-gradient(135deg, #1a0a14, #2d0e22)',
         route: '/products/storymaker-course'
     },
@@ -20,7 +20,7 @@ export const Products = [
         badgeColor: 'var(--accent-cyan)',
         rating: 5,
         students: '834',
-        icon: <img src="/contract.png" alt='Reviva Suas Fotos' />,
+        icon: <img src="/contract.png" alt='Reviva Suas Fotos'/>,
         gradient: 'linear-gradient(135deg, #0a1a1a, #0d2626)',
         route: '/products/contract'
     },
@@ -32,7 +32,7 @@ export const Products = [
         badgeColor: 'var(--accent-orange)',
         rating: 4,
         students: '567',
-        icon: <img src="/old-photo.jpeg" alt='Reviva Suas Fotos' />,
+        icon: <img src="/old-photo.jpeg" alt='Reviva Suas Fotos'/>,
         gradient: 'linear-gradient(135deg, #1a1000, #2d1c00)',
         route: '/products/image-editor'
     },

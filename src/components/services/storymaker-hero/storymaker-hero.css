@@ -233,71 +233,98 @@
 /* ─── MOBILE ─────────────────────────────────────────────── */
 
 @media (max-width: 767px) {
-  .sm-hero {
+  .storymaker-hero {
     padding: 60px 20px 48px;
   }
 
-  .sm-hero-container {
+  .storymaker-hero-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .sm-badge {
+  .storymaker-badge {
     font-size: 10px;
     padding: 6px 12px;
   }
 
-  .sm-hero-title {
+  .storymaker-hero-title {
     font-size: clamp(28px, 7vw, 48px);
     margin-bottom: 16px;
   }
 
-  .sm-hero-description {
+  .storymaker-hero-description {
     max-width: 100%;
     font-size: 15px;
     margin-bottom: 28px;
   }
 
-  .sm-hero-actions {
+  .storymaker-hero-actions {
     flex-direction: column;
     gap: 12px;
   }
 
-  .sm-hero-actions .btn-primary,
-  .sm-hero-actions .btn-outline {
+  .storymaker-hero-actions .btn-primary,
+  .storymaker-hero-actions .btn-outline {
     width: 100%;
     justify-content: center;
   }
 
-  .sm-hero-stats {
+  .storymaker-hero-stats {
     gap: 24px;
     margin-top: 32px;
     flex-wrap: wrap;
   }
 
-  .sm-hero-stats strong {
+  .storymaker-hero-stats strong {
     font-size: 22px;
   }
 
-  .sm-hero-visual {
+  /* Visual: layout em coluna, sem posicionamento absoluto */
+  .storymaker-hero-visual {
     min-height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
-  .sm-phone-mockup {
-    width: 160px;
-    height: 300px;
+  .storymaker-phone {
+    display: flex;
+    justify-content: center;
   }
 
-  .sm-floating-card {
-    position: static;
-    padding: 10px 14px;
+  .storymaker-phone img {
+    max-height: 220px;
+    object-fit: contain;
+  }
+
+  /* Reset todos os floating cards para posição estática */
+  .storymaker-floating-card,
+  .card-income,
+  .card-events,
+  .card-reels {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    order: unset !important;
+    padding: 12px 14px;
     border-radius: 12px;
     width: 100%;
   }
 
-  .sm-card-reels,
-  .sm-card-4k,
-  .sm-card-team {
-    position: static;
+  .storymaker-floating-card span {
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+
+  .storymaker-floating-card strong {
+    font-size: 13px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
   }
 }

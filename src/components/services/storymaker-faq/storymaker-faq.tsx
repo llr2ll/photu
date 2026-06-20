@@ -1,11 +1,3 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { StorymakersHero } from './assets/storymaker-hero/storymaker-hero'
-import { StorymakersPackages } from './assets/storymaker-packages/storymaker-packages'
-import { StorymakersIncludes } from './assets/storymaker-includes/storymaker-includes'
-import { StorymakersProcess } from './assets/storymaker-process/storymaker-process'
-import { StorymakersCtaSection } from './assets/storymaker-cta/storymaker-cta'
-
-// FAQ inline to avoid naming issues
 import './assets/storymaker-faq/storymaker-faq.css'
 
 const FAQS = [
@@ -17,7 +9,7 @@ const FAQS = [
   { question: 'O que é marcação de @ nos stories?', answer: 'Durante os stories ao vivo, marcamos até 10 perfis do Instagram, como familiares, convidados ou fornecedores do evento.' },
 ]
 
-function StorymakersFrequentlyAskedQuestions() {
+export function StorymakersFrequentlyAskedQuestions() {
   return (
     <section className="sm-faq">
       <div className="sm-faq-container">
@@ -38,20 +30,5 @@ function StorymakersFrequentlyAskedQuestions() {
         </div>
       </div>
     </section>
-  )
-}
-
-export const Route = createFileRoute('/services/storymaker-service')({ component: RouteComponent })
-
-function RouteComponent() {
-  return (
-    <>
-      <StorymakersHero />
-      <StorymakersIncludes />
-      <StorymakersPackages />
-      <StorymakersProcess />
-      <StorymakersFrequentlyAskedQuestions />
-      <StorymakersCtaSection />
-    </>
   )
 }
