@@ -1,43 +1,5 @@
+import { Markets } from '@/data/products/storymaker-course'
 import './markets-section.css'
-
-const Markets = [
-  {
-    emoji: '🎂',
-    title: 'Festas Infantis',
-    description:
-      'Cobertura em tempo real com stories, reels e bastidores para pais e convidados.',
-  },
-  {
-    emoji: '💍',
-    title: 'Casamentos',
-    description:
-      'Conteúdo instantâneo enquanto a equipe principal produz as fotos e vídeos.',
-  },
-  {
-    emoji: '🎓',
-    title: 'Formaturas',
-    description:
-      'Registre os melhores momentos e entregue conteúdo durante o evento.',
-  },
-  {
-    emoji: '🎤',
-    title: 'Eventos Corporativos',
-    description:
-      'Stories, reels e bastidores para fortalecer a presença digital das empresas.',
-  },
-  {
-    emoji: '🛍️',
-    title: 'Lançamentos',
-    description:
-      'Crie conteúdo para marcas, lojas e empreendedores durante eventos especiais.',
-  },
-  {
-    emoji: '📸',
-    title: 'Bastidores',
-    description:
-      'Trabalhe ao lado de fotógrafos e videomakers agregando um novo serviço.',
-  },
-]
 
 export function MarketsSection() {
   return (

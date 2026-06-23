@@ -44,10 +44,8 @@ public/
 
 # A Fazer 
 
-- Configurar um defaultNotFoundComponent
 - Página de Auditoria 
 - Integração de Pagamento
 - Resolver Bugs de Css no Hero
 - Finalizar Image Editor 
 - Criar novo Produto de Planilha de Gastos
-- //npx @better-auth/cli migrate

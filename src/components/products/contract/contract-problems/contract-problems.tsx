@@ -1,37 +1,5 @@
+import { Problems } from '@/data/products/contract'
 import './contract-problems.css'
-
-const Problems = [
-  {
-    title: 'Cancelamentos de última hora',
-    description:
-      'Defina regras claras para cancelamentos e remarcações.',
-  },
-  {
-    title: 'Pagamentos atrasados',
-    description:
-      'Estabeleça prazos, condições e multas em caso de inadimplência.',
-  },
-  {
-    title: 'Pedidos fora do combinado',
-    description:
-      'Documente exatamente o que está incluso no serviço.',
-  },
-  {
-    title: 'Uso indevido das imagens',
-    description:
-      'Proteja seus direitos e deixe a utilização das fotos claramente definida.',
-  },
-  {
-    title: 'Conflitos na entrega',
-    description:
-      'Formalize prazos e responsabilidades de ambas as partes.',
-  },
-  {
-    title: 'Acordos apenas por WhatsApp',
-    description:
-      'Tenha um documento profissional que transmite confiança e segurança.',
-  },
-]
 
 export function ContractProblems() {
   return (

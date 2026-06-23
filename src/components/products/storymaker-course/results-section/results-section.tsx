@@ -1,31 +1,5 @@
+import { Results } from "@/data/products/storymaker-course"
 import "./results-section.css"
-
-const Results = [
-  {
-    title: 'Cobrir eventos profissionalmente',
-    description: 'Aprenda exatamente o que gravar em cada momento importante.',
-  },
-  {
-    title: 'Criar Stories que engajam',
-    description: 'Produza conteúdo que os clientes terão orgulho de compartilhar.',
-  },
-  {
-    title: 'Editar Reels rapidamente',
-    description: 'Fluxo simples para entregar conteúdo sem perder horas editando.',
-  },
-  {
-    title: 'Conseguir clientes pelo Instagram',
-    description: 'Transforme seu perfil em uma máquina de vendas.',
-  },
-  {
-    title: 'Definir seus próprios preços',
-    description: 'Aprenda a precificar sem copiar concorrentes.',
-  },
-  {
-    title: 'Trabalhar usando apenas o celular',
-    description: 'Comece com o equipamento que você já possui.',
-  },
-]
 
 export function ResultsSection() {
   return (

@@ -1,6 +1,6 @@
 import { CartIcon, StarRatingIcon } from '@/data/icons.tsx'
 import { useNavigate } from '@tanstack/react-router'
-import { Products } from '@/data/products.tsx'
+import { Products } from '@/data/home'
 import './products-section.css';
 
 export function ProductsSection() {

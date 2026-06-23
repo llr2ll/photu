@@ -1,6 +1,8 @@
 
 import { ArrowRightIcon } from '@/data/icons';
+import { Link } from '@tanstack/react-router';
 import './services-section.css';
+import { Features } from '@/data/home';
 
 export function ServiceSection() {
   return <section id="nossos-serviços" className="services-section">
@@ -37,10 +39,10 @@ export function ServiceSection() {
                 ))}
               </div>
 
-              <a href="/services/storymaker-service" className="btn-primary" rel="noopener noreferrer">
+              <Link to="/storymaker-service" className="btn-primary" rel="noopener noreferrer">
                 Ver Pacotes
                 <ArrowRightIcon />
-              </a>
+              </Link>
 
               <img src="/cage.png" alt="Reviva Seus Vídeos" style={{ position: 'absolute', bottom: '10px', right:'10%', height: '250px'}}/>
             </div>
@@ -86,12 +88,7 @@ export function ServiceSection() {
 
           {/* Features row */}
           <div className="features-grid">
-            {[
-              { icon: '⚡', label: 'Atendimento Personalizado', desc: 'Foco total nas suas necessidades' },
-              { icon: '💳', label: 'Pagamento Facilitado', desc: 'Parcele em até 12x sem juros' },
-              { icon: '🔄', label: 'Entrega Rápida', desc: 'Todos os Serviços entregues em até 48 horas' },
-              { icon: '✅', label: 'Satisfação Garantida', desc: '100% de garantia ou reembolso' },
-            ].map(feat => (
+            {Features.map(feat => (
               <div key={feat.label} className="feature-card">
                 <div className="feature-icon">{feat.icon}</div>
                 <div className="feature-label">{feat.label}</div>

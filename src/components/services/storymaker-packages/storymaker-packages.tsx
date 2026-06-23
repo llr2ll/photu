@@ -1,76 +1,7 @@
-import { useState } from 'react'
+import { EventTypes, Includes } from '@/data/service/storymaker-service'
+import { WhatsappLink } from '@/data/footer-links'
 import './storymaker-packages.css'
-
-const EventTypes = [
-  {
-    id: 'aniversarios',
-    label: '🎂 Aniversários',
-    packages: [
-      {
-        hours: '4 Horas',
-        tag: 'MAIS VENDIDO',
-        reels: 4,
-        price: 'R$ 600',
-        featured: true,
-      },
-      {
-        hours: '6 Horas',
-        tag: null,
-        reels: 6,
-        price: 'R$ 900',
-        featured: false,
-      },
-    ],
-  },
-  {
-    id: 'quinze',
-    label: '👑 15 Anos',
-    packages: [
-      {
-        hours: '4 Horas',
-        tag: 'MAIS VENDIDO',
-        reels: 4,
-        price: 'R$ 800',
-        featured: true,
-      },
-      {
-        hours: '6 Horas',
-        tag: null,
-        reels: 6,
-        price: 'R$ 1.200',
-        featured: false,
-      },
-    ],
-  },
-  {
-    id: 'casamentos',
-    label: '💍 Casamentos',
-    packages: [
-      {
-        hours: '4 Horas',
-        tag: 'MAIS VENDIDO',
-        reels: 4,
-        price: 'R$ 800',
-        featured: true,
-      },
-      {
-        hours: '8 Horas',
-        tag: null,
-        reels: 8,
-        price: 'R$ 1.600',
-        featured: false,
-      },
-    ],
-  },
-]
-
-const Includes = [
-  '📲 Stories ilimitados durante todo o período',
-  '🎬 Resolução em qualidade alta 4K',
-  '🤩 Captação em ângulos diferentes',
-  '👥 2 profissionais Storymakers / editores fixos',
-  '📍 Marcamos até 10 @ nos stories do perfil',
-]
+import { useState } from 'react'
 
 export function StorymakersPackages() {
   const [active, setActive] = useState('aniversarios')
@@ -131,7 +62,7 @@ export function StorymakersPackages() {
                 ))}
               </div>
 
-              <a href="https://api.whatsapp.com/send/?phone=13996545872&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"
+              <a href={WhatsappLink} target="_blank" rel="noopener noreferrer"
                 className={pkg.featured ? 'btn-primary sm-package-btn' : 'btn-outline sm-package-btn'}
               >
                 Quero esse pacote

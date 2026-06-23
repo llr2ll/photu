@@ -1,31 +1,5 @@
+import { Steps } from '@/data/products/contract'
 import './contract-process.css'
-
-const Steps = [
-  {
-    number: '01',
-    title: 'Compre',
-    description:
-      'Finalize sua compra de forma rápida e segura.',
-  },
-  {
-    number: '02',
-    title: 'Receba',
-    description:
-      'O contrato é liberado imediatamente após a confirmação.',
-  },
-  {
-    number: '03',
-    title: 'Personalize',
-    description:
-      'Adapte os dados para o seu negócio e seus clientes.',
-  },
-  {
-    number: '04',
-    title: 'Utilize',
-    description:
-      'Envie para assinatura e trabalhe com muito mais segurança.',
-  },
-]
 
 export function ContractProcess() {
   return (

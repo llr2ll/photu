@@ -16,9 +16,9 @@ export const FooterLinks = [
     { 
         title: 'Produtos', 
         links: [
-            { label: 'Curso Storymaker', url: '/products/storymaker-course', target: false },
-            { label: 'Contratos Jurídicos', url: '/products/contract', target: false },
-            { label: 'Reviva Suas Fotos', url: '/products/image-editor', target: false },
+            { label: 'Curso Storymaker', url: '/storymaker-course', target: false },
+            { label: 'Contratos Jurídicos', url: '/contract', target: false },
+            { label: 'Reviva Suas Fotos', url: '/image-editor', target: false },
         ] 
     },
     { 

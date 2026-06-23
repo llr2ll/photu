@@ -1,61 +1,6 @@
+import { InstagramLink } from '@/data/footer-links'
 import './history-section.css'
-
-const Testimonials = [
-  {
-    name: 'Ana Beatriz',
-    handle: '@anabeatriz',
-    avatar: 'A',
-    role: 'Noiva',
-    text: 'A Photu transformou o nosso casamento em algo eterno. Os stories em tempo real fizeram nossos convidados reviverem cada momento mesmo de longe. Não tem preço.',
-    event: '💍 Casamento',
-    hearts: '847',
-  },
-  {
-    name: 'Carla Mendes',
-    handle: '@carlamendes',
-    avatar: 'C',
-    role: 'Mãe de Aniversariante',
-    text: 'Contratei para o aniversário de 15 anos da minha filha e fiquei sem palavras. O conteúdo ficou pronto antes de acabar a festa! Todo mundo pediu o contato.',
-    event: '🎂 Festa de 15 Anos',
-    hearts: '1.2k',
-  },
-  {
-    name: 'Rodrigo Lima',
-    handle: '@rodlima.biz',
-    avatar: 'R',
-    role: 'Empresário',
-    text: 'Usamos a Photu no lançamento da nossa loja e o conteúdo gerou mais engajamento do que qualquer campanha paga que já fizemos. Profissionalismo do início ao fim.',
-    event: '🛍️ Lançamento',
-    hearts: '512',
-  },
-  {
-    name: 'Fernanda Costa',
-    handle: '@fecosta',
-    avatar: 'F',
-    role: 'Formanda',
-    text: 'Cada segundo da minha formatura foi registrado com tanto cuidado e emoção. Revejo os stories até hoje e choro de felicidade. Obrigada, Photu!',
-    event: '🎓 Formatura',
-    hearts: '934',
-  },
-  {
-    name: 'Marcelo Tavares',
-    handle: '@marcelotav',
-    avatar: 'M',
-    role: 'Organizador de Eventos',
-    text: 'Parceiro fixo em todos os meus eventos. A entrega é sempre impecável, o time chega antes de todo mundo e sai depois de todo mundo. Recomendo sem hesitar.',
-    event: '🎤 Evento Corporativo',
-    hearts: '2.1k',
-  },
-  {
-    name: 'Julia Ribeiro',
-    handle: '@ju.ribeiro',
-    avatar: 'J',
-    role: 'Aniversariante',
-    text: 'Meu aniversário virou referência na família graças ao trabalho da Photu. As fotos, os reels, os stories... Tudo com uma sensibilidade que poucos têm.',
-    event: '🎉 Aniversário',
-    hearts: '673',
-  },
-]
+import { Testimonials } from '@/data/home'
 
 export function HistorySection() {
   return (
@@ -129,12 +74,11 @@ export function HistorySection() {
         </div>
 
         <div className="history-cta">
-          <a
-            href="https://www.instagram.com/studioyastrees/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="history-ig-button"
-          >
+          <a className="history-ig-button"
+             rel="noopener noreferrer"
+             href={InstagramLink}
+             target="_blank">
+              
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <rect x="2" y="2" width="20" height="20" rx="5" />
               <circle cx="12" cy="12" r="4" />

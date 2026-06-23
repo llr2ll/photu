@@ -1,37 +1,5 @@
+import { FAQS } from '@/data/products/contract'
 import './contract-faq.css'
-
-const FAQS = [
-  {
-    question: 'Posso editar o contrato?',
-    answer:
-      'Sim. O documento foi desenvolvido para ser totalmente personalizável, permitindo adaptar informações, cláusulas e condições ao seu negócio.',
-  },
-  {
-    question: 'Recebo imediatamente após a compra?',
-    answer:
-      'Sim. Após a confirmação do pagamento você recebe acesso imediato ao arquivo.',
-  },
-  {
-    question: 'Serve para ensaios fotográficos?',
-    answer:
-      'Sim. O modelo pode ser utilizado tanto para ensaios quanto para eventos, bastando ajustar as informações necessárias.',
-  },
-  {
-    question: 'Serve para casamentos e eventos?',
-    answer:
-      'Sim. O contrato foi pensado para fotógrafos que atuam em diversos segmentos e pode ser adaptado para diferentes tipos de trabalho.',
-  },
-  {
-    question: 'Preciso ter conhecimento jurídico?',
-    answer:
-      'Não. O documento já possui uma estrutura pronta para uso e foi criado para facilitar sua rotina profissional.',
-  },
-  {
-    question: 'Posso utilizar quantas vezes quiser?',
-    answer:
-      'Sim. Após a compra você poderá utilizar o contrato em todos os seus atendimentos futuros.',
-  },
-]
 
 export function ContractFaq() {
   return (

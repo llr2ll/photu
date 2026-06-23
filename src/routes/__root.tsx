@@ -1,3 +1,4 @@
+import { DefaultNotFound } from "@/components/default/default-not-found";
 import { HeadContent, createRootRoute } from "@tanstack/react-router";
 import { DefaultBody } from "@/components/default/default-body";
 import "../styles.css";
@@ -10,6 +11,7 @@ export const Route = createRootRoute({
       { title: "Photu" }
     ]
   }),
+  notFoundComponent: DefaultNotFound,
   shellComponent: ({ children }: { children: React.ReactNode }) => 
     <html lang="pt-BR">
       <head>

@@ -1,31 +1,5 @@
+import { Benefits } from '@/data/products/contract'
 import './contract-benefits.css'
-
-const Benefits = [
-  {
-    title: 'Proteção Jurídica',
-    description:
-      'Formalize acordos e tenha tudo documentado para evitar interpretações equivocadas.',
-    icon: '🛡️',
-  },
-  {
-    title: 'Mais Profissionalismo',
-    description:
-      'Transmita mais confiança e credibilidade desde o primeiro contato com o cliente.',
-    icon: '📄',
-  },
-  {
-    title: 'Segurança Financeira',
-    description:
-      'Defina valores, prazos, sinal e condições de pagamento com clareza.',
-    icon: '💰',
-  },
-  {
-    title: 'Menos Conflitos',
-    description:
-      'Evite discussões sobre entregas, alterações e responsabilidades durante o serviço.',
-    icon: '🤝',
-  },
-]
 
 export function ContractBenefits() {
   return (

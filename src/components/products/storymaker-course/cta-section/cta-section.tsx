@@ -1,13 +1,5 @@
+import { Includes } from '@/data/products/storymaker-course'
 import './cta-section.css'
-
-const Includes = [
-  '12 módulos completos',
-  'Acesso imediato',
-  'Atualizações futuras',
-  'Materiais complementares',
-  'Bônus exclusivos',
-  'Certificado de conclusão',
-]
 
 export function CtaSection() {
   return (

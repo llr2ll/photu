@@ -1,31 +1,5 @@
+import { Highlights } from '@/data/products/storymaker-course'
 import './highlights-section.css'
-
-const Highlights = [
-  {
-    icon: '📸',
-    title: 'Cobertura em Tempo Real',
-    description:
-      'Stories e registros durante todo o evento sem perder os momentos mais importantes.',
-  },
-  {
-    icon: '⚡',
-    title: 'Conteúdo Pronto para Postar',
-    description:
-      'Reels e stories editados rapidamente para manter o engajamento enquanto o evento acontece.',
-  },
-  {
-    icon: '❤️',
-    title: 'Narrativa Emocional',
-    description:
-      'Transformamos acontecimentos em histórias capazes de gerar conexão e lembranças.',
-  },
-  {
-    icon: '📱',
-    title: 'Foco em Redes Sociais',
-    description:
-      'Conteúdo pensado para Instagram, TikTok e plataformas que exigem velocidade e impacto.',
-  },
-]
 
 export function HighlightsSection() {
   return (

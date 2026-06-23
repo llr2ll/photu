@@ -1,0 +1,157 @@
+/* ─── PROCESS SECTION ────────────────────────────────────── */
+
+.ie-process {
+  padding: 80px 40px;
+  background: rgba(255,255,255,.01);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ie-process-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Right panel */
+
+.ie-process-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ie-credits-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(0,212,255,.06);
+  border: 1px solid rgba(0,212,255,.15);
+  font-size: 14px;
+  color: rgba(255,255,255,.7);
+}
+
+.ie-credits-bar--guest {
+  background: rgba(255,255,255,.03);
+  border-color: rgba(255,255,255,.08);
+}
+
+.ie-credits-bar strong { color: var(--accent-cyan); }
+
+.ie-cost-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(0,212,255,.1);
+  border: 1px solid rgba(0,212,255,.2);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+/* Status messages */
+
+.ie-status {
+  padding: 16px 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ie-status--processing {
+  background: rgba(233,30,140,.06);
+  border: 1px solid rgba(233,30,140,.2);
+  color: rgba(255,255,255,.7);
+  flex-direction: row;
+  align-items: center;
+}
+
+.ie-status--done {
+  background: rgba(57,211,83,.07);
+  border: 1px solid rgba(57,211,83,.2);
+  color: rgba(255,255,255,.85);
+}
+
+.ie-status--warn {
+  background: rgba(255,107,53,.07);
+  border: 1px solid rgba(255,107,53,.25);
+  color: rgba(255,255,255,.8);
+}
+
+.ie-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(233,30,140,.3);
+  border-top-color: var(--accent-pink);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.ie-download-btn {
+  align-self: flex-start;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.ie-action-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ie-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.ie-google-btn:hover {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.2);
+}
+
+.ie-process-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 16px;
+  padding: 16px 24px;
+}
+
+.ie-process-btn:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.ie-process-hint {
+  font-size: 12px;
+  color: rgba(255,255,255,.35);
+  line-height: 1.6;
+  margin: 0;
+}

@@ -1,13 +1,5 @@
+import { DetailsIncludes } from '@/data/products/contract'
 import './contract-details.css'
-
-const Includes = [
-  'Contrato profissional para fotógrafos',
-  'Arquivo totalmente editável',
-  'Pronto para personalização',
-  'Uso ilimitado',
-  'Pronto para impressão',
-  'Compatível com assinatura digital',
-]
 
 export function ContractDetails() {
   return (
@@ -19,7 +11,7 @@ export function ContractDetails() {
               O QUE VOCÊ RECEBE
             </div>
 
-            {Includes.map(item => (
+            {DetailsIncludes.map(item => (
               <div
                 key={item}
                 className="contract-details-item"
@@ -53,7 +45,7 @@ export function ContractDetails() {
           </p>
 
           <div className="contract-details-list">
-            {Includes.map(item => (
+            {DetailsIncludes.map(item => (
               <div
                 key={item}
                 className="contract-details-list-item"

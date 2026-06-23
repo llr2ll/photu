@@ -1,12 +1,5 @@
+import { Includes } from '@/data/products/contract'
 import './contract-cta.css'
-
-const Includes = [
-  'Download imediato',
-  'Arquivo totalmente editável',
-  'Uso ilimitado',
-  'Compatível com assinatura digital',
-  'Pronto para personalização',
-]
 
 export function ContractCTA() {
   return (

@@ -1,3 +1,4 @@
+import { InstagramLink, WhatsappLink } from '@/data/footer-links'
 import './storymaker-cta.css'
 
 export function StorymakersCtaSection() {
@@ -34,23 +35,19 @@ export function StorymakersCtaSection() {
             </div>
           </div>
 
-          <a
-            href="https://api.whatsapp.com/send/?phone=13996545872&text&type=phone_number&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary sm-cta-button"
-          >
+          <a className="btn-primary sm-cta-button"
+             rel="noopener noreferrer" 
+             href={WhatsappLink} 
+             target="_blank">
             Quero reservar minha data
           </a>
 
           <div className="sm-cta-social">
             <span>Veja nosso trabalho no</span>
-            <a
-              href="https://www.instagram.com/studioyastrees"
-              target="_blank"
+            <a className="sm-cta-instagram"
               rel="noopener noreferrer"
-              className="sm-cta-instagram"
-            >
+              href={InstagramLink}
+              target="_blank">
               @studioyastrees
             </a>
           </div>

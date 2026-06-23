@@ -1,27 +1,5 @@
+import { Bonuses } from '@/data/products/storymaker-course'
 import './bonus-section.css'
-
-const Bonuses = [
-  {
-    title: 'Meu Kit de Storymaker',
-    description:
-      'Os equipamentos, acessórios e ferramentas que utilizo para cobrir eventos.',
-  },
-  {
-    title: 'Checklist de Evento',
-    description:
-      'Um guia prático para não esquecer nenhuma etapa durante a cobertura.',
-  },
-  {
-    title: 'Fluxo de Trabalho',
-    description:
-      'Processo completo desde o primeiro contato até a entrega final.',
-  },
-  {
-    title: 'Modelo de Atendimento',
-    description:
-      'Estrutura pronta para conversar com clientes e fechar mais contratos.',
-  },
-]
 
 export function BonusSection() {
   return (

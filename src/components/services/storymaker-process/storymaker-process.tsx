@@ -1,27 +1,5 @@
+import { Steps } from '@/data/service/storymaker-service'
 import './storymaker-process.css'
-
-const Steps = [
-  {
-    number: '01',
-    title: 'Entre em contato',
-    description: 'Fale com a gente pelo WhatsApp, escolha o pacote e confirme a data do seu evento.',
-  },
-  {
-    number: '02',
-    title: 'Nós chegamos antes',
-    description: 'No dia do evento nossa equipe chega antes de todos para não perder nenhum detalhe.',
-  },
-  {
-    number: '03',
-    title: 'Cobertura ao vivo',
-    description: 'Stories ilimitados ao longo de todo o evento, captados em ângulos diferentes em 4K.',
-  },
-  {
-    number: '04',
-    title: 'Reels em até 48h',
-    description: 'Após o evento, você recebe todos os Reels editados e tratados prontos para publicar.',
-  },
-]
 
 export function StorymakersProcess() {
   return (
