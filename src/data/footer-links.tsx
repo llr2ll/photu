@@ -1,5 +1,5 @@
-export const WhatsappLink = 'https://api.whatsapp.com/send/?phone=13996545872&text&type=phone_number&app_absent=0&utm_source=ig'
-export const InstagramLink = 'https://www.instagram.com/studioyastrees'
+export const WhatsappLink = 'https://api.whatsapp.com/send/?phone=+5513978070224&text&type=phone_number&app_absent=0&utm_source=ig'
+export const InstagramLink = 'https://www.instagram.com/studioprime.storymaker/'
 
 export const PaymentMethodLinks = [
   { name: 'Visa', img: '/payments/visa.svg' },
